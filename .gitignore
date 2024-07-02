@@ -1,1 +1,7 @@
+# Virtual Environment
 .venv
+
+# Build files
+build
+dist
+*.spec

@@ -23,7 +23,7 @@ def settings_flood():
   attacking = False             # Angriff aktiv
 
   while not attacking:
-    userInput = input("(v0.1) \033[92mguest\033[0m:\033[91m~/dos/flood\033[0m$ ")  # Eingabeaufforderung
+    userInput = input("(alpha-v1.1) \033[92mguest\033[0m:\033[91m~/dos/flood\033[0m$ ")  # Eingabeaufforderung
     
     command = userInput.split(" ")[0]
     value = userInput[len(command):].strip()

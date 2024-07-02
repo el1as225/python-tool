@@ -1,5 +1,5 @@
-from modules.flood.flood import flood
-from modules.flood.interface import settings_flood, cls
+from modules.flood.__main__ import Flood
+from modules.flood.interface import FloodSettings, cls
 
 
 def main():
@@ -15,10 +15,11 @@ def main():
     # Start Flood module
     match input("(alpha-v1.1) \033[92mguest\033[0m:\033[91m~/eli's_dos_kit\033[0m$ "):
         case "flood":
-            url, num_requests, num_threads, delay_between_requests, rate_limit_timeout, attacking = settings_flood()
+            settings_flood = FloodSettings()
+            url, num_requests, num_threads, delay_between_requests, rate_limit_timeout, attacking = settings_flood.settings_flood()
+            flood = Flood(url, num_requests, num_threads, delay_between_requests, rate_limit_timeout)
             if attacking:
-                flood(url, num_requests, num_threads,
-                      delay_between_requests, rate_limit_timeout)
+                flood.start()
             else:
                 exit(1)
         case "exit":

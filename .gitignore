@@ -4,6 +4,7 @@
 # Build files
 build
 dist
+output
 
 # Cache files
 __pycache__
